@@ -26,11 +26,15 @@
       box-sizing: border-box;
     }
 
-    .container h2 {
+    .logo {
+      display: block;
+      margin: auto;
+      width: 100px;
+      height: auto;
+    }
+    .popup {
       text-align: center;
-      margin-bottom: 18px;
-      color: #2d3a4b;
-      font-weight: 600;
+      margin: 10px;
     }
 
     .input-group {
@@ -108,7 +112,7 @@
 <body>
 
   <div class="container" id="loginBox">
-    <h2>Login</h2>
+    <img src="LOGO.png" alt="Logo" class="logo">
     <div class="error" id="loginError"></div>
     <form id="loginForm" autocomplete="off">
       <div class="input-group">
@@ -123,9 +127,11 @@
   </div>
 
   <div class="container" id="signupBox" style="display:none;">
-    <h2>Sign Up</h2>
-    <div class="error" id="signupError"></div>
-    <div class="success" id="signupSuccess"></div>
+    <img src="LOGO.png" alt="Logo" class="logo">
+    <div class="popup"> <span class="error" id="signupError"></span>
+      <span class="success" id="signupSuccess"></span>
+    </div>
+
     <form id="signupForm" autocomplete="off">
       <div class="input-group">
         <input type="text" id="signupUsername" placeholder="Username" required>
@@ -203,7 +209,6 @@
 
         localStorage.setItem("lastSignedUpUser", JSON.stringify(newUser));
         console.log("User signed up:", newUser);
-        alert('Account created! Welcome, ' + username + '.');
         document.getElementById('signupForm').reset();
       }
     };
