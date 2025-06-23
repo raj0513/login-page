@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>test</title>
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: black;
+      margin: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      background: linear-gradient(90deg, #0546a0, #b44ac0);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background: white;
+      border-radius: 50px;
+      color: black;
+      width: 80%;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #7e5bef;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #7e5bef;
+    }
+
+    .nav-buttons button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-btn {
+      background: rgb(255, 255, 255);
+      color: #0546a0;
+      border: 2px solid #0546a0;
+    }
+
+    .signup-btn {
+      background: linear-gradient(90deg, #0546a0, #b44ac0);
+      color: white;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      background: linear-gradient(90deg, #0546a0, #b44ac0);
+      color: white;
+      margin: 0;
+    }
+
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-text p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    .link-form {
+      display: flex;
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .link-form input {
+      border: none;
+      border-radius: 31px 0 0 31px;
+      padding: 10px 20px;
+      flex: 1;
+      font-size: 16px;
+    }
+
+    .link-form button {
+      background: #0546a0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .small {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .hero-image {
+      max-width: 100%;
+      height: 500px;
+      border-radius: 20px;
+      margin-left: 20px;
+    }
+
+    .features {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .fboxs {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      gap: 50px;
+    }
+
+    .fboxout {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+
+    }
+
+    .fboxin {
+      background: rgb(228, 228, 228);
+      color: black;
+      padding: 20px;
+      border-radius: 20px;
+      width: 280px;
+      text-align: center;
+    }
+
+    .fimage {
+      width: 250px;
+      height: 280px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .fdiscription {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .footersection {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      background: linear-gradient(90deg, #0546a0, #b44ac0);
+      color: white;
+    }
+
+    .footer h1 {
+      width: 200px;
+    }
+
+    .getstarted {
+      background: white;
+      color: black;
+      padding: 10px 15px;
+      border-radius: 25px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .getstarted:hover {
+      background: #7e5bef;
+      color: white;
+      border: 1px solid #000000;
+    }
+
+    .copyright p {
+      color: black;
+      font-size: medium;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">LO<span>GO</span></div>
+      <ul class="nav-links">
+        <li><a href="#">Feature</a></li>
+        <li><a href="#">How It Work</a></li>
+        <li><a href="#">Personas</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button class="login-btn">Log In</button>
+        <button class="signup-btn">Sign up</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Don’t just share a link start a relationship</h1>
+      <p>Leadr lets you turn social media traffic into high-quality leads — with built-in forms, analytics, and CRM
+        relationship</p>
+      <form class="link-form">
+        <input type="text" placeholder="yourname" />
+        <button type="submit">Create Link</button>
+      </form>
+      <p class="small">It’s free, & takes less than a minute</p>
+    </div>
+    <img src="Screenshot 2025-06-22 193820.png" alt="Image" class="hero-image">
+  </section>
+  <section class="features">
+    <h1 class="features">Features</h1>
+    <div class="fboxs">
+      <div class="fboxout">
+        <div class="fboxin">
+          <img src="a (1).png" alt="Feature 1" class="fimage">
+          <p class="fdiscription">feature 1.</p>
+        </div>
+        <div class="fboxin">
+          <img src="a (2).png" alt="Feature 2" class="fimage">
+          <p class="fdiscription">feature 2.</p>
+        </div>
+      </div>
+      <div class="fboxout">
+        <div class="fboxin">
+          <img src="a (2).png" alt="Feature 3" class="fimage">
+          <p class="fdiscription">feature 3.</p>
+        </div>
+        <div class="fboxin">
+          <img src="a (1).png" alt="Feature 4" class="fimage">
+          <p class="fdiscription">feature 4.</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <section class="footersection">
+        <h1>The best time to start selling on Beacons was yesterday.</h1>
+        <button class="getstarted">Get Started</button>
+      </section>
+      <div class="copyright">
+        <p>&copy; 2025 Your Company Name. All rights reserved.</p>
+      </div>
+    </footer>
+  </section>
+
+  <script>
+    document.querySelector(".link-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const input = document.querySelector(".link-form input");
+      const username = input.value.trim();
+
+      if (username) {
+        const link = `https://${encodeURIComponent(username)}.com`;
+        alert(`Your link is: ${link}`);
+      } else {
+        alert("Please enter your name to generate a link.");
+      }
+    });
+  </script>
+
+  <div id="userData"></div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    if (user) {
+      console.log("Logged-in user on test.html:", user);
+      document.getElementById("userData").textContent = `Hello, ${user.username}!`;
+    } else {
+      console.log("No user found in localStorage.");
+      document.getElementById("userData").textContent = "No user logged in.";
+    }
+  </script>
+
+</body>
+</html>
