@@ -25,17 +25,6 @@ links.forEach(link => {
 });
 
 
-  function toggleDropdown() {
-    const dropdown = document.getElementById("profileDropdown");
-    dropdown.classList.toggle("active");
-  }
- 
-  function logout() {
-    localStorage.removeItem("loggedInUser");
-    alert("Logged out!");
-    window.location.href = "login.html";
-  }
-
 // create link form functionality
 document.querySelector(".link-form").addEventListener("submit", function (e) {
     e.preventDefault();
@@ -89,5 +78,5 @@ document.querySelector(".link-form").addEventListener("submit", function (e) {
   function logout() {
     localStorage.removeItem("loggedInUser");
     alert("Logged out!");
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   }
