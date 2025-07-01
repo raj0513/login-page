@@ -5,108 +5,8 @@
   <meta charset="UTF-8">
   <title>Login & Signup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      background: linear-gradient(90deg, #0546a0, #b44ac0);
-      font-family: sans-serif;
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .container {
-      background: #fff;
-      padding: 32px 28px 24px 28px;
-      border-radius: 16px;
-      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
-      width: 340px;
-      max-width: 95vw;
-      box-sizing: border-box;
-    }
-
-    .logo {
-      display: block;
-      margin: auto;
-      width: 100px;
-      height: auto;
-    }
-    .popup {
-      text-align: center;
-      margin: 10px;
-    }
-
-    .input-group {
-      margin-bottom: 18px;
-      position: relative;
-      box-shadow: 0 8px 12px rgba(44, 62, 80, 0.15);
-      border-radius: 8px;
-    }
-
-    input[type="text"],
-    input[type="password"],
-    input[type="email"],
-    input[type="tel"] {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #dbe2ea;
-      border-radius: 8px;
-      font-size: 15px;
-      outline: none;
-      transition: border 0.5s;
-      box-sizing: border-box;
-    }
-
-    input:focus {
-      border: 1.5px solid #4e8cff;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #4e8cff;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    button:hover {
-      background: #357ae8;
-    }
-
-    .error,
-    .success {
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 14px;
-      min-height: 18px;
-    }
-
-    .error {
-      color: #e74c3c;
-    }
-
-    .success {
-      color: #27ae60;
-    }
-
-    .switch-link {
-      text-align: center;
-      margin-top: 10px;
-      color: #4e8cff;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
-    .switch-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="login.css">
+  
 </head>
 
 <body>
@@ -116,10 +16,10 @@
     <div class="error" id="loginError"></div>
     <form id="loginForm" autocomplete="off">
       <div class="input-group">
-        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="text" id="loginUsername" placeholder="Username" required maxlength="16">
       </div>
       <div class="input-group">
-        <input type="password" id="loginPassword" placeholder="Password" required>
+        <input type="password" id="loginPassword" placeholder="Password" required minlength="6" maxlength="16">
       </div>
       <button type="submit">Login</button>
     </form>
@@ -134,86 +34,28 @@
 
     <form id="signupForm" autocomplete="off">
       <div class="input-group">
-        <input type="text" id="signupUsername" placeholder="Username" required>
+        <input type="text" id="signupName" placeholder="Name" required>
+      </div>
+      <div class="input-group">
+        <input type="text" id="signupUsername" placeholder="Username" required maxlength="16">
+      </div>
+      <div class="input-group">
+        <input type="password" id="signupPassword" placeholder="Password" required minlength="6" maxlength="16">
+      </div>
+      <div class="input-group">
+        <input type="tel" id="signupphoneNumber" placeholder="Phone Number" required minlength="10"maxlength="10" pattern="[0-9]{10}">
       </div>
       <div class="input-group">
         <input type="email" id="signupEmail" placeholder="Email" required>
-      </div>
-      <div class="input-group">
-        <input type="tel" id="signupphoneNumber" placeholder="Phone Number" required>
-      </div>
-      <div class="input-group">
-        <input type="password" id="signupPassword" placeholder="Password" required>
-      </div>
+      </div>    
+      
       <button type="submit">Sign Up</button>
     </form>
     <div class="switch-link" onclick="showLogin()">Already have an account? Login</div>
   </div>
 
-  <script>
-    function showSignup() {
-      document.getElementById('loginBox').style.display = 'none';
-      document.getElementById('signupBox').style.display = 'block';
-      document.getElementById('loginForm').reset();
-      document.getElementById('loginError').textContent = '';
-    }
-
-    function showLogin() {
-      document.getElementById('signupBox').style.display = 'none';
-      document.getElementById('loginBox').style.display = 'block';
-      document.getElementById('signupForm').reset();
-      document.getElementById('signupError').textContent = '';
-      document.getElementById('signupSuccess').textContent = '';
-    }
-
-    let users = [
-      { username: 'admin', password: 'password', email: 'admin@example.com' }
-    ];
-
-    document.getElementById('loginForm').onsubmit = function (e) {
-      e.preventDefault();
-      const user = document.getElementById('loginUsername').value.trim();
-      const pass = document.getElementById('loginPassword').value;
-      const errorMsg = document.getElementById('loginError');
-
-      const found = users.find(u => u.username === user && u.password === pass);
-      if (found) {
-        errorMsg.textContent = '';
-        localStorage.setItem("loggedInUser", JSON.stringify(found));
-        console.log("User logged in:", found);
-        window.location.href = "test.html";
-      } else {
-        errorMsg.textContent = 'Invalid username or password.';
-      }
-    };
-
-    document.getElementById('signupForm').onsubmit = function (e) {
-      e.preventDefault();
-      const username = document.getElementById('signupUsername').value.trim();
-      const email = document.getElementById('signupEmail').value.trim();
-      const phone = document.getElementById('signupphoneNumber').value.trim();
-      const password = document.getElementById('signupPassword').value;
-      const errorMsg = document.getElementById('signupError');
-      const successMsg = document.getElementById('signupSuccess');
-
-      const exists = users.find(u => u.username === username);
-
-      if (exists) {
-        errorMsg.textContent = 'Username already exists.';
-        successMsg.textContent = '';
-      } else {
-        const newUser = { username, email, phone, password };
-        users.push(newUser);
-        errorMsg.textContent = '';
-        successMsg.textContent = 'Signup successful! Please login.';
-
-        localStorage.setItem("lastSignedUpUser", JSON.stringify(newUser));
-        console.log("User signed up:", newUser);
-        document.getElementById('signupForm').reset();
-      }
-    };
-  </script>
-
+  <script src="login.js"></script>
 </body>
 
 </html>
+

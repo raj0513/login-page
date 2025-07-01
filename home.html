@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>test</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="home.html"><img src="LOGO.png" alt="logo" class="logo"></a>
+      <ul class="nav-menu">
+        <li><a onclick="showSection('home')">Home</a></li>
+        <li><a onclick="showSection('abouts')">Abouts</a></li>
+        <li><a onclick="showSection('contact')">Contact</a></li>
+      </ul>
+
+      <div class="profile-container">
+        <div class="profile-button" onclick="toggleDropdown()">
+          <img src="user.png" alt="User" class="user-img" />
+          <button class="user-name" id="userName">User</button>
+        </div>
+
+        <div class="dropdown-card" id="dropdownCard">
+          <div class="card-header">
+            <p id="cardUserName">Name</p>
+            <small id="cardUserEmail">you@example.com</small>
+          </div>
+          <div class="dropdown-option"> Profile</div>
+          <div class="dropdown-option"> Settings</div>
+          <div class="dropdown-option logout-btn" onclick="logout()"> Logout</div>
+        </div>
+      </div>
+
+    </nav>
+  </header>
+
+  <section id="home" class="active">
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Don’t just share a link start a relationship</h1>
+        <p>Leadr lets you turn social media traffic into high-quality leads — with built-in forms, analytics, and CRM
+          relationship</p>
+        <form class="link-form">
+          <input type="text" placeholder="yourname" />
+          <button type="submit">Create Link</button>
+        </form>
+        <p class="small">It’s free, & takes less than a minute</p>
+      </div>
+      <img src="Screenshot 2025-06-22 193820.png" alt="Image" class="hero-image">
+    </div>
+    <div class="features">
+      <h1 class="features">Features</h1>
+      <div class="fboxs">
+        <div class="fboxout">
+          <div class="fboxin">
+            <img src="a (1).png" alt="Feature 1" class="fimage">
+            <p class="fdiscription">feature</p>
+          </div>
+          <div class="fboxin">
+            <img src="a (2).png" alt="Feature 2" class="fimage">
+            <p class="fdiscription">feature</p>
+          </div>
+        </div>
+        <div class="fboxout">
+          <div class="fboxin">
+            <img src="a (2).png" alt="Feature 3" class="fimage">
+            <p class="fdiscription">feature</p>
+          </div>
+          <div class="fboxin">
+            <img src="a (1).png" alt="Feature 4" class="fimage">
+            <p class="fdiscription">feature</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="how-section">
+      <h1>How It Works</h1>
+      <p>See how easy it is to get started and build your audience</p>
+
+      <div class="steps-container">
+        <div class="steps">
+          <div class="step">
+            <img src="Sign Up.png" alt="Sign Up" class="step-image">
+            <h2>Discover Your Custom Link</h2>
+            <p>Choose your unique link name to personalize your landing page URL</p>
+          </div>
+
+          <div class="step">
+            <img src="Create Your Page.png" alt="Sign Up" class="step-image">
+            <h2>Build Your Page Visually</h2>
+            <p>Use our drag-and-drop builder to create a stunning landing page</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <img src="Share Anywhere.png" alt="Sign Up" class="step-image">
+            <h2>Share Your Link Everywhere</h2>
+            <p>Post on social media, send in emails, or add to bios</p>
+          </div>
+
+          <div class="step">
+            <img src="Track Performance.png" alt="Sign Up" class="step-image">
+            <h2>Watch Your Leads Grow</h2>
+            <p>Track performance with real-time analytics and CRM insights</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <img src="Collect Leads Automatically.png" alt="Sign Up" class="step-image">
+            <h2>Collect Leads Automatically</h2>
+            <p>Every form submission goes directly to your CRM — no manual effort</p>
+          </div>
+
+          <div class="step">
+            <img src="Engage with Visitors.png" alt="Sign Up" class="step-image">
+            <h2>Engage with Visitors</h2>
+            <p>Use automated email or WhatsApp replies to convert visitors into customers</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <img src="Grow Your Business.png" alt="Sign Up" class="step-image">
+            <h2> Grow Your Business</h2>
+            <p>Use insights from analytics to improve and scale your strategy</p>
+          </div>
+          
+          <div class="step" style="background: white; box-shadow: none; ">
+            
+            
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="pricing-section">
+        <h1>Choose Your Plan</h1>
+        <p>Select a plan that fits your needs</p>
+
+        <div class="plans">
+          <div class="plan">
+            <h2>Basic</h2>
+            <p class="price">₹0/month</p>
+            <ul>
+              <li>1 Landing Page</li>
+              <li>Limited Analytics</li>
+              <li>Email Support</li>
+            </ul>
+            <button>Get Started</button>
+          </div>
+
+          <div class="plan">
+            <h2>Pro</h2>
+            <p class="price">₹299/month</p>
+            <ul>
+              <li>5 Landing Pages</li>
+              <li>Advanced Analytics</li>
+              <li>Priority Support</li>
+            </ul>
+            <button>Start Free Trial</button>
+          </div>
+
+          <div class="plan">
+            <h2>Enterprise</h2>
+            <p class="price">₹499/month</p>
+            <ul>
+              <li>Unlimited Pages</li>
+              <li>Full CRM Features</li>
+              <li>24/7 Support</li>
+            </ul>
+            <button>Contact Sales</button>
+          </div>
+        </div>
+
+
+  </section>
+
+
+
+  <section id="abouts">
+    <div class="abouts-section">
+      <h1>Our Services</h1>
+      <p>We help you grow your digital presence and generate better leads</p>
+
+      <div class="abouts-grid">
+
+        <div class="abouts-grid-in">
+          <div class="about-card">
+            <img src="Landing Page Builder.png" alt="about Icon" class="about-image">
+            <h3>Landing Page Builder</h3>
+            <p>Create stunning landing pages in minutes with drag-and-drop tools and pre-made templates.</p>
+          </div>
+          <div class="about-card">
+            <img src="Lead Capture.png" alt="about Icon" class="about-image">
+            <h3>Lead Capture</h3>
+            <p>Capture leads with smart forms, popups, and integrated CRM support for maximum conversion.</p>
+          </div>
+        </div>
+
+        <div class="abouts-grid-in">
+          <div class="about-card">
+            <img src="Email Campaigns.png" alt="about Icon" class="about-image">
+            <h3>Email Campaigns</h3>
+            <p>Send automated follow-ups, newsletters, and offers to your leads right from your dashboard.</p>
+          </div>
+          <div class="about-card">
+            <img src="Analytics & Reports.png" alt="about Icon" class="about-image">
+            <h3>Analytics & Reports</h3>
+            <p>Track your performance with visual dashboards, click rates, and conversion metrics in real-time.</p>
+          </div>
+        </div>
+
+        <div class="abouts-grid-in">
+          <div class="about-card">
+            <img src="CRM Integration.png" alt="about Icon" class="about-image">
+            <h3>CRM Integration</h3>
+            <p>Connect and sync your contacts with tools like HubSpot, Salesforce, and Zoho in seconds.</p>
+          </div>
+          <div class="about-card">
+            <img src="Custom Domains.png" alt="about Icon" class="about-image">
+            <h3>Custom Domains</h3>
+            <p>Use your own brand domain with HTTPS and build trust with your audience easily.</p>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <div class="contact-form">
+
+      <form class="contact-form-in" onsubmit="submitContact(event)">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Number" required>
+        <input type="text" placeholder="Subject" required>
+        <input type="text" placeholder="Message" required>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+
+    <div class="footer-container">
+      <div class="footer-column footer-subscribe">
+        <h3>Subscribe</h3>
+        <p>To get updates</p>
+        <form>
+          <input type="email" placeholder="Your email" required>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+      <div id="footer-container">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <a href="home.html"><img src="LOGO.png" alt="Logo"></a>
+          </div>
+          <p>Connecting ideas with digital excellence.</p>
+          <div class="social-icons">
+            <a href="#"><img src="fb-w.png" alt="fb" class="ficon"></a>
+            <a href="#"><img src="x-w.png" alt="x" class="ficon"></a>
+            <a href="#"><img src="insta-w.png" alt="insta" class="ficon"></a>
+            <a href="#"><img src="in-w.png" alt="in" class="ficon"></a>
+          </div>
+        </div>
+
+        <div class="footer-column footer-links">
+          <h3>Quick Links</h3>
+          <a href="#">Home</a>
+          <a href="#">How It Work</a>
+          <a href="#">abouts</a>
+          <a href="#">Pricing</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3>Contact Us</h3>
+          <p><img src="email.png" alt="Email" class="ficon"> contact@gmail.com</p>
+          <p><img src="phone-call.png" alt="Phone" class="ficon"> +91 1234567890</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="home.js"></script>
+
+</body>
+
+</html>
